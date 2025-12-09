@@ -10,26 +10,18 @@ const LoginPage = () => {
       className="relative min-h-screen bg-center bg-cover"
       style={{ backgroundImage: `url(${BG_IMAGE})` }}
     >
-      {/* dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
-
-      {/* top logo */}
       <header className="relative z-10 px-6 py-6 sm:px-12">
         <h1 className="font-netflix text-red-600 text-6xl tracking-[0.3em] scale-y-125">
           NETFLIX
         </h1>
       </header>
-
-      {/* center card */}
       <main className="relative z-10 flex flex-col items-center justify-center px-4 pb-16">
-
-        {/* Sign-in form box */}
         <div className="w-full max-w-md px-8 py-10 rounded-md bg-black/75 sm:px-12 sm:py-12">
           <h1 className="mb-6 text-3xl font-bold text-white">Sign In</h1>
 
           <LoginForm />
 
-          {/* extra text below form like real Netflix */}
           <div className="flex items-center justify-between mt-3 text-sm text-gray-400">
             <label className="flex items-center gap-2">
               <input type="checkbox" className="accent-red-600" />
@@ -49,8 +41,7 @@ const LoginPage = () => {
             This page is protected by Google reCAPTCHA to ensure you&apos;re not a bot.
           </p>
         </div>
-
-        {/* DEMO CREDENTIAL BOX */}
+        
         <div className="max-w-md px-6 py-4 mt-6 text-center border rounded-md bg-black/60 backdrop-blur-md border-white/20">
           <h2 className="mb-2 text-lg font-semibold text-white">
             Beginner Demo Credentials

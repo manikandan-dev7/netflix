@@ -14,15 +14,15 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden text-white bg-black">
 
       {/* NAVBAR */}
-      <nav className="flex items-center justify-between px-6 sm:px-12 py-4 bg-gradient-to-b from-black/80 to-transparent fixed w-full z-20">
+      <nav className="fixed z-20 flex items-center justify-between w-full px-6 py-4 sm:px-12 bg-gradient-to-b from-black/80 to-transparent">
         <h1 className="font-netflix text-red-600 text-6xl tracking-[0.3em] scale-y-125">
           NETFLIX
         </h1>
 
-        <div className="hidden md:flex items-center gap-6 text-sm">
+        <div className="items-center hidden gap-6 text-sm md:flex">
           <button className="hover:underline">Home</button>
           <button className="hover:underline">TV Shows</button>
           <button className="hover:underline">Movies</button>
@@ -41,19 +41,18 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
         <div className="z-10 max-w-xl">
-          {/* Stranger Things Title Logo */}
           <h2 className="w-[320px] sm:w-[460px] mb-4 text-red-600 text-4xl font-bold">Stranger Things</h2>
 
-          <p className="text-base sm:text-lg text-gray-300 mb-6">
+          <p className="mb-6 text-base text-gray-300 sm:text-lg">
             When a young boy vanishes, a small town uncovers a mystery involving
             secret experiments, supernatural forces and a strange little girl.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-white text-black px-6 py-3 rounded-md font-semibold hover:bg-gray-200">
+            <button className="px-6 py-3 font-semibold text-black bg-white rounded-md hover:bg-gray-200">
               ▶ Play
             </button>
-            <button className="bg-gray-700/70 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-600/70">
+            <button className="px-6 py-3 font-semibold text-white rounded-md bg-gray-700/70 hover:bg-gray-600/70">
               ℹ More Info
             </button>
           </div>
@@ -61,11 +60,11 @@ const HomePage = () => {
       </div>
 
       {/* MOVIE ROWS */}
-      <div className="px-6 sm:px-12 pb-10">
-        <h3 className="text-xl font-semibold mb-3">Trending Now</h3>
+      <div className="px-6 pb-10 sm:px-12">
+        <h3 className="mb-3 text-xl font-semibold">Trending Now</h3>
 
         <div className="overflow-hidden">
-          <div className="flex gap-4 overflow-x-auto py-2 scrollbar-hide">
+          <div className="flex gap-4 py-2 overflow-x-auto scrollbar-hide">
             {movies.map((url, index) => (
               <div
                 key={index}
@@ -74,7 +73,7 @@ const HomePage = () => {
                 <img
                   src={url}
                   alt="movie"
-                  className="h-full w-full object-cover"
+                  className="object-cover w-full h-full"
                 />
               </div>
             ))}
