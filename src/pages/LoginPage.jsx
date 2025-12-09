@@ -7,28 +7,30 @@ const BG_IMAGE =
 const LoginPage = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center relative"
+      className="relative min-h-screen bg-center bg-cover"
       style={{ backgroundImage: `url(${BG_IMAGE})` }}
     >
       {/* dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
       {/* top logo */}
-      <header className="relative z-10 px-6 sm:px-12 py-6">
+      <header className="relative z-10 px-6 py-6 sm:px-12">
         <h1 className="font-netflix text-red-600 text-6xl tracking-[0.3em] scale-y-125">
           NETFLIX
         </h1>
       </header>
 
       {/* center card */}
-      <main className="relative z-10 flex items-center justify-center px-4 pb-16">
-        <div className="bg-black/75 max-w-md w-full px-8 sm:px-12 py-10 sm:py-12 rounded-md">
-          <h1 className="text-white text-3xl font-bold mb-6">Sign In</h1>
+      <main className="relative z-10 flex flex-col items-center justify-center px-4 pb-16">
+
+        {/* Sign-in form box */}
+        <div className="w-full max-w-md px-8 py-10 rounded-md bg-black/75 sm:px-12 sm:py-12">
+          <h1 className="mb-6 text-3xl font-bold text-white">Sign In</h1>
 
           <LoginForm />
 
           {/* extra text below form like real Netflix */}
-          <div className="flex items-center justify-between text-sm text-gray-400 mt-3">
+          <div className="flex items-center justify-between mt-3 text-sm text-gray-400">
             <label className="flex items-center gap-2">
               <input type="checkbox" className="accent-red-600" />
               <span>Remember me</span>
@@ -36,18 +38,37 @@ const LoginPage = () => {
             <button className="hover:underline">Need help?</button>
           </div>
 
-          <p className="text-gray-400 text-sm mt-6">
+          <p className="mt-6 text-sm text-gray-400">
             New to Netflix?{" "}
-            <span className="text-white hover:underline cursor-pointer">
+            <span className="text-white cursor-pointer hover:underline">
               Sign up now
             </span>
           </p>
 
-          <p className="text-gray-400 text-xs mt-3">
-            This page is protected by Google reCAPTCHA to ensure you&apos;re not
-            a bot.
+          <p className="mt-3 text-xs text-gray-400">
+            This page is protected by Google reCAPTCHA to ensure you&apos;re not a bot.
           </p>
         </div>
+
+        {/* DEMO CREDENTIAL BOX */}
+        <div className="max-w-md px-6 py-4 mt-6 text-center border rounded-md bg-black/60 backdrop-blur-md border-white/20">
+          <h2 className="mb-2 text-lg font-semibold text-white">
+            Beginner Demo Credentials
+          </h2>
+
+          <p className="text-sm text-gray-300">
+            <span className="font-semibold text-white">Email:</span> abc@gmail.com
+          </p>
+
+          <p className="mt-1 text-sm text-gray-300">
+            <span className="font-semibold text-white">Password:</span> 123
+          </p>
+
+          <p className="mt-3 text-xs text-gray-400">
+            (This project is in its beginner phase for learning and demonstration.)
+          </p>
+        </div>
+
       </main>
     </div>
   );
